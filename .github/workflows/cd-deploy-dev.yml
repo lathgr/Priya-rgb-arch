@@ -18,7 +18,7 @@ jobs:
       IMAGE_TAG: ${{ github.run_number }}
       
       CLUSTER_NAME: myAKSCluster
-      RESOURSE_GROUP: myResourceGroup
+      RESOURSE_GROUP: myAKSRG
     needs: [build]
     environment: dev
     steps:
