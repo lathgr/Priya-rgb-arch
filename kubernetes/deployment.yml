@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: deployment-service
   labels:
-    app: springOAuthRepo
+    app: springOauthRepo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: springOAuthRepo
+      app: springOauthRepo
   template:
     metadata:
       labels:
-        app: springOAuthRepo
+        app: springOauthRepo
     spec:
       containers:
-        - name: springOAuthRepo
-          image: sriharipriya/springOAuthRepo:${{ github.run_number }}
+        - name: springOauthRepo
+          image: sriharipriya/springOauthRepo:${{ github.run_number }}
 
           ports: 
             - containerPort: 8080
