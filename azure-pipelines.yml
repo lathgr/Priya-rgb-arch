@@ -42,7 +42,7 @@ steps:
   displayName: docker build and publish 
   inputs:
     containerRegistry: 'docker'
-    repository: 'khravi / java-webapp'
+    repository: 'sriharipriya / springOauthRepo'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile' 
 
