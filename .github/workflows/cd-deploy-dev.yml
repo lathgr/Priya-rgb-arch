@@ -18,7 +18,7 @@ jobs:
       IMAGE_TAG: ${{ github.run_number }}
       
       CLUSTER_NAME: myAKSCluster
-      RESOURSE_GROUP: myAKSRG
+      RESOURSE_GROUP: myResourceGroup
     needs: [build]
     environment: dev
     steps:
@@ -53,7 +53,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           cluster-name: myAKSCluster
-          resource-group: myAKSRG
+          resource-group: myResourceGroup
       
       - name: Apply Kubernetes deployment
         uses: Azure/k8s-deploy@v1
